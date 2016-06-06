@@ -42,5 +42,4 @@ public abstract class AbstractArrayStorage implements Storage {
             storage[index] = r;
         }
     }
-
 }
