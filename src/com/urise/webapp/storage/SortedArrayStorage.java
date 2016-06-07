@@ -10,7 +10,7 @@ public class SortedArrayStorage extends AbstractArrayStorage {
     public void save(Resume r) {
         int index = getIndex(r.getUuid());
         if (checkStorageForSave(r)) {
-            System.out.println("Resume " + r.getUuid() + " already exist " + " OR " + " Storage overflow");
+            System.out.println("Resume " + r.getUuid() + " already exist " + "OR" + " Storage overflow");
         } else {
             index = -index - 1;
             System.arraycopy(storage, index, storage, index + 1, size - index);

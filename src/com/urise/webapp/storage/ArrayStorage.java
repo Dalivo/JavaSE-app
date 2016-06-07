@@ -8,7 +8,7 @@ public class ArrayStorage extends AbstractArrayStorage {
 
     public void save(Resume r) {
         if (checkStorageForSave(r)) {
-            System.out.println("Resume " + r.getUuid() + " already exist " + " OR " + " Storage overflow");
+            System.out.println("Resume " + r.getUuid() + " already exist " + "OR" + " Storage overflow");
         } else {
             storage[size] = r;
             size++;
