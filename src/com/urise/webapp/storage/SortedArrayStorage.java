@@ -9,9 +9,7 @@ public class SortedArrayStorage extends AbstractArrayStorage {
     @Override
     public void save(Resume r) {
         int index = getIndex(r.getUuid());
-        if (checkStorageForSave(r)) {
-            System.out.println("Resume " + r.getUuid() + " already exist " + "OR" + " Storage overflow");
-        } else {
+        if (!checkStorageForSave(r)) {
             index = -index - 1;
             System.arraycopy(storage, index, storage, index + 1, size - index);
             storage[index] = r;
@@ -22,9 +20,7 @@ public class SortedArrayStorage extends AbstractArrayStorage {
     @Override
     public void delete(String uuid) {
         int index = getIndex(uuid);
-        if (checkStorageForDelete(uuid)) {
-            System.out.println("Resume " + uuid + " not exist");
-        } else {
+        if (!checkStorageForDelete(uuid)) {
             System.arraycopy(storage, index + 1, storage, index, size - index - 1);
             size--;
         }

@@ -7,9 +7,7 @@ import java.util.Arrays;
 public class ArrayStorage extends AbstractArrayStorage {
 
     public void save(Resume r) {
-        if (checkStorageForSave(r)) {
-            System.out.println("Resume " + r.getUuid() + " already exist " + "OR" + " Storage overflow");
-        } else {
+        if (!checkStorageForSave(r)) {
             storage[size] = r;
             size++;
         }
@@ -17,9 +15,7 @@ public class ArrayStorage extends AbstractArrayStorage {
 
     public void delete(String uuid) {
         int index = getIndex(uuid);
-        if (checkStorageForDelete(uuid)) {
-            System.out.println("Resume " + uuid + " not exist");
-        } else {
+        if (!checkStorageForDelete(uuid)) {
             storage[index] = storage[size - 1];
             storage[size - 1] = null;
             size--;

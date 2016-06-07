@@ -45,13 +45,18 @@ public abstract class AbstractArrayStorage implements Storage {
 
     public boolean checkStorageForDelete(String uuid) {
         if (getIndex(uuid) < 0) {
+            System.out.println("Resume " + uuid + " not exist");
             return true;
         }
         return false;
     }
 
     public boolean checkStorageForSave(Resume r) {
-        if (getIndex(r.getUuid()) >= 0 || size == STORAGE_LIMIT) {
+        if (getIndex(r.getUuid()) >= 0) {
+            System.out.println("Resume " + r.getUuid() + " already exist ");
+            return true;
+        } else if (size == STORAGE_LIMIT) {
+            System.out.println("Storage overflow");
             return true;
         }
         return false;
