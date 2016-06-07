@@ -43,11 +43,17 @@ public abstract class AbstractArrayStorage implements Storage {
         }
     }
 
-    public String checkStorageforDelete(String uuid) {
-        String notice = null;
+    public boolean checkStorageForDelete(String uuid) {
         if (getIndex(uuid) < 0) {
-            notice = "Resume " + uuid + " not exist";
+            return true;
         }
-        return notice;
+        return false;
+    }
+
+    public boolean checkStorageForSave(Resume r) {
+        if (getIndex(r.getUuid()) >= 0 || size == STORAGE_LIMIT) {
+            return true;
+        }
+        return false;
     }
 }
