@@ -42,4 +42,12 @@ public abstract class AbstractArrayStorage implements Storage {
             storage[index] = r;
         }
     }
+
+    public String checkStorageforDelete(String uuid) {
+        String notice = null;
+        if (getIndex(uuid) < 0) {
+            notice = "Resume " + uuid + " not exist";
+        }
+        return notice;
+    }
 }
