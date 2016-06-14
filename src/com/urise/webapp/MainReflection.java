@@ -4,10 +4,7 @@ import com.urise.webapp.model.Resume;
 
 import java.lang.reflect.Field;
 
-/**
- * gkislin
- * 12.06.2016
- */
+
 public class MainReflection {
 
     public static void main(String[] args) throws IllegalAccessException {
