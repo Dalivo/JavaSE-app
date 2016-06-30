@@ -24,7 +24,6 @@ public interface Storage {
     /**
      * @return array, contains only Resumes in storage (without null)
      */
-    Collection<Resume> getAllSorted();
 
     Resume[] getAll();
 
