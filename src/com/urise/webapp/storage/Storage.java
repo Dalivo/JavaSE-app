@@ -21,9 +21,6 @@ public interface Storage {
 
     void delete(String uuid);
 
-    /**
-     * @return array, contains only Resumes in storage (without null)
-     */
     Collection<Resume> getAllSorted();
 
     Resume[] getAll();
