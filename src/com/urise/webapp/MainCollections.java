@@ -4,6 +4,10 @@ import com.urise.webapp.model.Resume;
 
 import java.util.*;
 
+/**
+ * gkislin
+ * 16.06.2016
+ */
 public class MainCollections {
     private static final String UUID_1 = "uuid1";
     private static final Resume RESUME_1 = new Resume(UUID_1);
@@ -54,5 +58,9 @@ public class MainCollections {
         for (Map.Entry<String, Resume> entry : map.entrySet()) {
             System.out.println(entry.getValue());
         }
+
+        List<Resume> resumes = Arrays.asList(RESUME_1, RESUME_2, RESUME_3);
+        resumes.remove(1);
+        System.out.println(resumes);
     }
 }

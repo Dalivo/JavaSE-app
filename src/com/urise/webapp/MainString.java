@@ -1,6 +1,9 @@
 package com.urise.webapp;
 
-
+/**
+ * gkislin
+ * 10.06.2016
+ */
 public class MainString {
     public static void main(String[] args) {
         String[] strArray = new String[]{"1", "2", "3", "4", "5"};
