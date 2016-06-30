@@ -2,13 +2,12 @@ package com.urise.webapp.storage;
 
 import com.urise.webapp.model.Resume;
 
-import java.util.Collection;
 import java.util.List;
 
 /**
  * Array based storage for Resumes
  */
-
+// TODO refactoring
 public interface Storage {
 
     void clear();
@@ -21,9 +20,10 @@ public interface Storage {
 
     void delete(String uuid);
 
-    Collection<Resume> getAllSorted();
-
-    Resume[] getAll();
+    /**
+     * @return return list, sorted by name
+     */
+    List<Resume> getAllSorted();
 
     int size();
 }

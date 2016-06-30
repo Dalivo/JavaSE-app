@@ -1,6 +1,9 @@
 package com.urise.webapp.storage;
 
-
+/**
+ * gkislin
+ * 23.06.2016
+ */
 public class MainUtil {
     public static void main(String[] args) {
         System.out.println(Integer.valueOf(-1) == Integer.valueOf(-1));
@@ -8,7 +11,6 @@ public class MainUtil {
         int result = getInt();
         System.out.println(result);
     }
-
 
     private static Integer getInt() {
         return null;
