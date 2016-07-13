@@ -6,7 +6,6 @@ import java.util.UUID;
 /**
  * com.urise.webapp.model.Resume class
  */
-// TODO refactor UUID
 public class Resume implements Comparable<Resume> {
 
     // Unique identifier
@@ -27,10 +26,6 @@ public class Resume implements Comparable<Resume> {
 
     public String getUuid() {
         return uuid;
-    }
-
-    public String getFullName() {
-        return fullName;
     }
 
     @Override
@@ -54,12 +49,12 @@ public class Resume implements Comparable<Resume> {
 
     @Override
     public String toString() {
-        return uuid;
+        return uuid + '(' + fullName + ')';
     }
 
     @Override
-    public int compareTo(Resume r) {
-        int cmp = fullName.compareTo(r.fullName);
-        return cmp == 0 ? uuid.compareTo(r.uuid) : cmp;
+    public int compareTo(Resume o) {
+        int cmp = fullName.compareTo(o.fullName);
+        return cmp != 0 ? cmp : uuid.compareTo(o.uuid);
     }
 }
