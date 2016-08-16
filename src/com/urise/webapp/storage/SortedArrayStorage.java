@@ -5,10 +5,7 @@ import com.urise.webapp.model.Resume;
 import java.util.Arrays;
 import java.util.Comparator;
 
-/**
- * GKislin
- * 26.05.2016
- */
+
 public class SortedArrayStorage extends AbstractArrayStorage {
 /*
     private static class ResumeComparator implements Comparator<Resume> {

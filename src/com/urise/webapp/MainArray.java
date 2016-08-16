@@ -9,9 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-/**
- * Test for com.urise.webapp.storage.ArrayStorage
- */
+
 public class MainArray {
     private final static Storage ARRAY_STORAGE = new ArrayStorage();
 

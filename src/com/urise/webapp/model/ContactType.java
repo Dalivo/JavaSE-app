@@ -1,9 +1,6 @@
 package com.urise.webapp.model;
 
-/**
- * gkislin
- * 06.07.2016
- */
+
 public enum ContactType {
     PHONE("Тел."),
     MOBILE("Мобильный"),

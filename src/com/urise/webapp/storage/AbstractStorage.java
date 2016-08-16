@@ -8,10 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
 
-/**
- * gkislin
- * 23.06.2016
- */
+
 public abstract class AbstractStorage<SK> implements Storage {
 
 //    protected final Logger LOG = Logger.getLogger(getClass().getName());

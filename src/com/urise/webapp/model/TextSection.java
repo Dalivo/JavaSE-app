@@ -1,13 +1,15 @@
 package com.urise.webapp.model;
 
-/**
- * gkislin
- * 14.07.2016
- */
+import java.util.Objects;
+
+
 public class TextSection extends Section {
+    private static final long serialVersionUID = 1L;
+
     private final String content;
 
     public TextSection(String content) {
+        Objects.requireNonNull(content, "content must not be null");
         this.content = content;
     }
 
@@ -27,12 +29,12 @@ public class TextSection extends Section {
 
         TextSection that = (TextSection) o;
 
-        return content != null ? content.equals(that.content) : that.content == null;
+        return content.equals(that.content);
 
     }
 
     @Override
     public int hashCode() {
-        return content != null ? content.hashCode() : 0;
+        return content.hashCode();
     }
 }

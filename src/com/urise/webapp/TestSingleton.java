@@ -2,10 +2,7 @@ package com.urise.webapp;
 
 import com.urise.webapp.model.SectionType;
 
-/**
- * gkislin
- * 06.07.2016
- */
+
 public class TestSingleton {
     private static TestSingleton instance;
 
